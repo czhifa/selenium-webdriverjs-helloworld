@@ -1,0 +1,8 @@
+{
+  "name": "selenium-webdriverjs-helloworld",
+  "version": "0.1.0",
+
+  "devDependencies": {
+    "selenium-webdriverjs": "0.0.x"
+  }
+}
