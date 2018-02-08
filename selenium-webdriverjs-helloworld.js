@@ -1,7 +1,7 @@
 // Small example of using WebdriverJS from
 // http://code.google.com/p/selenium/wiki/WebDriverJs
 
-var webdriver = require('selenium-webdriverjs');
+var webdriver = require('selenium-webdriver');
 
 var driver = new webdriver.Builder().
     usingServer('http://localhost:4444/wd/hub').
