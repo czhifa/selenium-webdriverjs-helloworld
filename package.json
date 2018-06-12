@@ -1,7 +1,9 @@
 {
   "name": "selenium-webdriverjs-helloworld",
   "version": "0.1.0",
-
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "selenium-webdriverjs": "0.0.x"
   }

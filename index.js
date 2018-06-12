@@ -2,8 +2,7 @@ var webdriver = require('selenium-webdriver');
 webdriver.promise.USE_PROMISE_MANAGER = false;//promise manager will be deprecated, bet not use it at all
 var driver = new webdriver.Builder().forBrowser('chrome').build();
 
-
-console.log('>> USE_PROMISE_MANAGER:',webdriver.promise.USE_PROMISE_MANAGER);
+//console.log('>> USE_PROMISE_MANAGER:',webdriver.promise.USE_PROMISE_MANAGER);
 
 driver.get('https://www.carrefour.com.br');//driver.get('https://carrefour.local:9002');
 
@@ -15,8 +14,8 @@ var autocompletePrice = '';
 
 //var search = driver.findElement(webdriver.By.className('crf-autocomplete'));
 //var searchProducts = search.findElement(webdriver.By.className('products'));
-
-input.sendKeys('pneu').then(sendKeys);
+driver.wait(webdriver.until.elementIsVisible(input)).then().catch()
+input.sendKeys('pneu').then(sendKeys).catch(function(e){console.log('error promisse', e)});
 function sendKeys(){
     console.log('[Buscando por "pneu". Esperando autocomplete...]')
     driver.wait(webdriver.until.elementIsVisible(driver.findElement(webdriver.By.css('.crf-autocomplete'))))
